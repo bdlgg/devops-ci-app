@@ -12,7 +12,7 @@ def create_app():
     def health():
         """Возвращает результат простой проверки жизнеспособности."""
 
-        return jsonify(status="ok")
+        return jsonify(status="unhealthy")
 
     @application.get("/")
     def index():
