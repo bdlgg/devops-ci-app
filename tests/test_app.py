@@ -26,8 +26,15 @@ def test_health(client):
 
 
 def test_index(client):
+
     """Проверяет основные сведения о службе."""
 
     response = client.get("/")
 
     assert response.status_code == 200
+
+    assert response.get_json() == {
+        "service": "devops-ci-app",
+        "version": "1.1.0-konstantinov",
+        "status": "running",
+    }
