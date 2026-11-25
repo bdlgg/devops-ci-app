@@ -20,7 +20,7 @@ def create_app():
 
         return jsonify(
             service="devops-ci-app",
-            version="1.0.0",
+            version="1.1.0-konstantinov",
             status="running",
         )
 
